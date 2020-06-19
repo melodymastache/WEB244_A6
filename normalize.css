@@ -1,0 +1,111 @@
+/* adding a cute cursor */
+* {
+     cursor: url(http://cur.cursors-4u.net/symbols/sym-6/sym597.cur), auto !important;
+} 
+/* adding an image to the background with transparency */
+body {
+    background-image: url("background.jpg");
+    opacity: 0.8;
+    overflow: scroll;
+}
+/* reshaping the logo to become a circle */
+.logo {
+    width: auto;
+    height: 100%;
+    margin: auto;
+    display: inline;
+    position: relative;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px dotted purple;
+    margin: 10px;
+}
+/* centering the header, styling fonts with custom google fonts, adding borders and padding */
+header {
+    position: fixed;
+    width: 98.75%;
+    height: 125px;
+    border: 2px solid purple;
+    border-radius: 25px;
+}
+.title {
+    color: white;
+    width: 100%;
+    text-align: center;
+    top: 20px;
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+}
+/* positioning the navigation bar, creating a transparent background, using custom fonts */
+nav {
+    position: fixed;
+    left: 5px;
+    top: 170px;
+    border: dashed 2px purple;
+    background-color: rgba(237, 234, 239, 0.7);
+    font-family: "Playfair Display SC";
+    font-size: 17px;
+    width: 250px;
+    bottom: 11%;
+}
+main {
+    border: 2px dashed purple;
+    width: 550px;
+    background-color: rgba(237, 234, 239, 0.7);
+    padding: 10px;
+    position: fixed;
+    left: 30%;
+    top: 40%;
+}
+main p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    margin: 1px;
+    padding: 9px;
+}
+aside {
+    border: dashed 2px purple;
+    background-color: rgba(237, 234, 239, 0.7);
+    font-family: "Playfair Display SC";
+    font-size: 15px;
+    width: 250px;
+    position: fixed;
+    right: 5px;
+    top: 170px;
+    bottom: 11%;
+}
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 98.75%;
+    height: 50px;
+    border: 2px solid purple;
+    border-radius: 25px;
+}
+/* aligning text in footer, creating a watermark */
+.copy {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    opacity: 0.4;
+    text-align: center;
+}
+/* changing the style of the links when the cursor hovers over them */
+a:hover {
+    color:purple;
+    font-family: cursive;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+/* permanently changing the style of font of a visited link */
+a:visited {
+    color: gray;
+}

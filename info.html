@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Information</title>
+        <!-- linking together js and css files, adding custom fonts. -->
+        <link rel="stylesheet" type="text/css" href="info.css">
+        <script src="info.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Space Expedition Application Form</h1>
+            <!-- adding logo -->
+            <figure class="circle"><img src = "powerpuff.png" alt="logo" class = "logo"></figure>
+        </header>
+        <nav>
+            <!-- linking to other pages/html files -->
+            <br>
+            <a href = "honesty.html" id="active">Home</a> <br> <br>
+            <a href = "info.html">Form</a> <br> <br>
+            <a href = "#bio">Bio</a> <br> <br>
+            <a href = "#gallery">Gallery</a> <br> <br>
+            <a href = "#camp">Space Camp</a> <br> <br>
+            <a href = "#contact">Contact</a> <br> <br>
+            <a href = "#gallery">Gallery</a> <br> <br>
+            <a href = "#camp">Space Camp</a> <br> <br>
+            <a href = "#contact">Contact</a> <br> <br>
+            <a href = "#gallery">Gallery</a> <br> <br>
+            <a href = "#camp">Space Camp</a> <br> <br>
+        </nav>
+        <main>
+            <!-- creating a form that posts to a separate link, and refers to a js file to check for validation -->
+            <form method="post" action="https://httpbin.org/post" name="signup" onsubmit="return checkForm(this);">
+                <p>All fields are required.</p>
+                <!-- divs for separate columns -->
+                <div class="colone">
+                    <p>First Name:</p>
+                    <!-- in form validation with onkeydown event handler -->
+                    <p><input type="text" name="firstname" required="required" autofocus onkeydown="this.valid()"></p>
+                    <p class="description">Must start with a capital and only alphabet allowed.</p><br>
+                    <p>Last Name:</p>
+                    <p><input type="text" name="lastname" required="required"></p>
+                    <p class="description">Must start with a capital and only alphabet allowed.</p> <br>
+                    <p>Password:</p>
+                    <!-- creating length limits for password and username -->
+                    <p><input type="password" name="password" minlength="6" maxlength="6" required="required"></p>
+                    <p class="description">Must begin with special character, have at least 1 letter and 1 digit, and be exactly 6 characters long.</p><br>
+                    <p>Username:</p>
+                    <p><input type="text" name="username" minlength="6" required="required"></p>
+                    <p class="description">Must begin with a letter and have at least 6 characters.</p><br>
+                </div>
+                <div class="coltwo">
+                    <p>Education Level:</p>
+                    <!-- creating a dropdown datalist with greyed out placeholder within the text box -->
+                    <p><input type="text" list="dropdown" name="edulevel" placeholder="-select-" required="required"/>
+                    <datalist id="dropdown">
+                        <option value="Technical Diploma">Technical Diploma</option>
+                        <option value="College Diploma">College Diploma</option>
+                        <option value="Bachelor's Degree">Bachelor's Degree</option>
+                        <option value="Master's Degree">Master's Degree</option>
+                        <option value="Others">Others</option>
+                    </datalist></p><br>
+                    <p>Education Status:</p>
+                    <!-- creating radio button options without default -->
+                        <p><input type="radio" name="edustat" value="Graduated"> Graduated</p>
+                        <p><input type="radio" name="edustat" value="Currently Enrolled"> Currently Enrolled</p>
+                        <p><input type="radio" name="edustat" value="Did Not Graduate"> Did Not Graduate</p>
+                    <p>Email:</p>
+                    <p><input type="email" name="email" required="required" placeholder="example@website.com"></p><br>
+                    <p>Age:</p>
+                    <!-- creating range slider with minumum and maximum values, with preview of currently selected value on the side of the slider -->
+                    <p><input type="range" name="age" id="age" min="18" max="60" oninput="nm.value = age.valueAsNumber" value="18"><output for="age" name="nm">18-60</output></p><br>
+                    <p><input type="submit" value="Submit" class="button">
+                    <input type="reset" value="Clear" class="button"></p>
+                </div>
+                <!-- hidden inputs for student info -->
+                <input type="hidden" name="studentlastName" id="lastName" value="Mastache"/>
+                <input type="hidden" name="studentId" id="studentId" value="126275189"/>
+            </form>
+        </main>
+        <aside>
+                <!-- creating a sidebar -->
+                <figure><img src="https://vignette.wikia.nocookie.net/final-space/images/c/c6/Character_-_Mooncake_%28Transparent_for_main_page%29.png/revision/latest/scale-to-width-down/200?cb=20180318235337" alt="mooncake"></figure>
+        </aside>
+        <!-- footer with student watermark -->
+        <footer> <p class='copy'><em>&copy; Citlalli Melody Mastache</em></p></footer>
+    </body>
+</html>
