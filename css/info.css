@@ -1,13 +1,15 @@
 /* adding a cute cursor */
 * {
     cursor: url(http://cur.cursors-4u.net/symbols/sym-6/sym597.cur), auto !important;
-} 
+}
+
 /* adding an image to the background with transparency */
 body {
-    background-image: url("background.jpg");
+    background-image: url("../assets/background.jpg");
     opacity: 0.8;
     overflow: scroll;
 }
+
 /* centering the header, styling fonts with custom google fonts, adding borders and padding */
 header {
     position: fixed;
@@ -16,15 +18,17 @@ header {
     border: 2px solid purple;
     border-radius: 25px;
 }
+
 h1 {
     color: white;
     width: 100%;
     text-align: center;
     top: 20px;
     font-size: 40px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     position: absolute;
 }
+
 /* reshaping the logo to become a circle */
 .logo {
     width: auto;
@@ -33,6 +37,7 @@ h1 {
     display: inline;
     position: relative;
 }
+
 .circle {
     width: 100px;
     height: 100px;
@@ -42,6 +47,7 @@ h1 {
     border: 2px dotted purple;
     margin: 10px;
 }
+
 /* positioning the navigation bar, creating a transparent background, using custom fonts */
 nav {
     position: fixed;
@@ -54,6 +60,7 @@ nav {
     width: 250px;
     bottom: 11%;
 }
+
 main {
     border: 2px dashed purple;
     width: 850px;
@@ -65,6 +72,7 @@ main {
     bottom: 11%;
     overflow: scroll;
 }
+
 /* creating two columns */
 .colone {
     float: left;
@@ -75,19 +83,23 @@ main {
     clear: both;
     float: right;
 }
+
 main p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 15px;
     margin: 1px;
     padding: 8px;
 }
+
 .description {
     font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
 }
+
 .button {
     width: 80px;
 }
+
 aside {
     border: dashed 2px purple;
     background-color: rgba(237, 234, 239, 0.7);
@@ -99,6 +111,7 @@ aside {
     bottom: 11%;
     top: 170px;
 }
+
 footer {
     position: fixed;
     bottom: 5px;
@@ -107,23 +120,27 @@ footer {
     border: 2px solid purple;
     border-radius: 25px;
 }
+
 /* aligning text in footer, creating a watermark */
 .copy {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     color: white;
     opacity: 0.4;
     text-align: center;
 }
+
 /* changing the style of the links when the cursor hovers over them */
 a:hover {
-    color:purple;
+    color: purple;
     font-family: cursive;
 }
+
 a {
     text-decoration: none;
     color: black;
     padding: 20px;
 }
+
 /* permanently changing the style of font of a visited link */
 a:visited {
     color: gray;
